@@ -8,10 +8,7 @@ Angular2 Modal Dialog Service Blog</a>
 ## To Install and Run Locally
 
 git clone https://github.com/xcellsoft/angular2-modal-dialog-service quickstartx
-
 cd quickstartx
-
 npm install
-
 npm start
 
