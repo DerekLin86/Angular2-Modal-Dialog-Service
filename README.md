@@ -8,10 +8,7 @@ This repository holds a copy of the Angular 2 QuickStart project along with the 
 
 Create a folder in your system and then from a terminal window type the following commands:
 
-git clone https://github.com/xcellsoft/angular2-modal-dialog-service quickstartx
-
+git clone https://github.com/xcellsoft/angular2-modal-dialog-service quickstartx<br/>
 cd quickstartx
-
 npm install
-
 npm start
