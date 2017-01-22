@@ -9,7 +9,9 @@ Angular2 Modal Dialog Service Blog</a>
 
 git clone https://github.com/xcellsoft/angular2-modal-dialog-service quickstartx
 
-cd quickstartx<br/>
-npm install<br/> 
-npm start<br/> 
+cd quickstartx
+
+npm install
+
+npm start
 
