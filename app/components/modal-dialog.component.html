@@ -1,0 +1,53 @@
+<style>
+    .modal-header {
+        border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;
+    }
+</style>
+<button #ModalShowModal type="button" style="display:none;" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalShowModalDiv"> Launch demo modal </button>
+<div id="ModalShowModalDiv" class="modal fade" data-keyboard="false" allong with tabindex="-1"  role="dialog" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" [ngClass]="{'alert-info': this.message?.type === 'information','alert-success': this.message?.type === 'success','alert-danger': this.message?.type === 'error'}" style="border-radius: 6px 6px 0 0;">
+                <h5 class="modal-title">{{title}}</h5>
+                <button type="button" #close class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div>{{message}}</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" #ok data-dismiss="modal" class="btn btn-default"
+                        [style.display]="setButtonDispaly(modalButton.Ok)"
+                            [ngClass]="{'btn-primary': this.defaultButton == modalButton.Ok}">
+                    Ok
+                </button>
+                <button [style.display]="setButtonDispaly(modalButton.Yes)"
+                            type="button" #yes data-dismiss="modal" class="btn btn-default"
+                            [ngClass]="{'btn-primary': defaultButton==modalButton.Yes}">
+                    Yes
+                </button>
+                <button [style.display]="setButtonDispaly(modalButton.Abort)"
+                        type="button" #abort data-dismiss="modal" class="btn btn-default"
+                        [ngClass]="{'btn-primary': defaultButton==modalButton.Abort}">
+                    Abort
+                </button>
+                <button [style.display]="setButtonDispaly(modalButton.Retry)"
+                        type="button" #retry data-dismiss="modal" class="btn btn-default"
+                        [ngClass]="{'btn-primary': defaultButton==modalButton.Retry}">
+                    Retry
+                </button>
+                <button [style.display]="setButtonDispaly(modalButton.No)"
+                        type="button" #no data-dismiss="modal" class="btn btn-default"
+                        [ngClass]="{'btn-primary': defaultButton==modalButton.No}">
+                    No
+                </button>
+                <button [style.display]="setButtonDispaly(modalButton.Cancel)"
+                        type="button" #cancel data-dismiss="modal" class="btn btn-default"
+                        [ngClass]="{'btn-primary': defaultButton==modalButton.Cancel}">
+                    Cancel
+                </button>
+                <button style="display:none" type="button" #terminated data-dismiss="modal" class="btn btn-default"></button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
